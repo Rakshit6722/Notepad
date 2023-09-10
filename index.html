@@ -77,8 +77,14 @@
 
         function set() {
             let val = document.querySelector('.js-input').value;
-            localStorage.setItem('store',val);
-            alert('Your data is saved');
+            if(val.trim()!=''){
+
+                localStorage.setItem('store',val);
+            }
+            else{
+
+                alert('Nothing to save here!');
+            }
         }
 
         function clearArea(){
